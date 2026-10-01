@@ -1,155 +1,137 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curriculum</title>
+  <title>Matt McDonald - Curriculum</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
-    <div>
-      <div>
-        <p>NICE TO MEET YOU</p>
-      </div>
-      <img src="images/foto.png" alt="foto de chico joven" />
-      <p>DESIGNER / DEVELOPER</p>
+    <div class="header-container">
+      <p class="greeting">NICE TO MEET YOU</p>
+      <img src="images/foto.png" alt="Fotografía de perfil de Matt McDonald" class="profile-img" />
+      <p class="role">DESIGNER / DEVELOPER</p>
       <h1>Matt McDonald</h1>
-      <button>CONTACT ME</button>
+      <a href="#contact" class="btn">CONTACT ME</a>
     </div>
   </header>
 
   <main>
-    <div>
-      <h3>About Me</h3>
+    <section id="about">
+      <h2>About Me</h2>
       <p>
         Use this area to say something about yourself or describe your goals. Tum dicere exorsus est cur verear, ne ad
         id omnia referri oporteat, ipsum per se ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis
-        praesentium
-        voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae
+        praesentium voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae
         placet: constituam, quid.
       </p>
-    </div>
-    <div>
-      <img src="images/Rectangle Copy.png" alt="Recangulo verde separador de secciones">
-    </div>
+    </section>
 
-    <div>
+    <section id="experience">
       <h2>Experience</h2>
-      <h3>FRONT-END DEVELOPER — DROPBOX</h3>
-      <p>Mar. 2020 - Present</p>
-      <p>
-        Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se
-        ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque
-        insitam in ea quid
-        est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.
-      </p>
-    </div>
-    <div>
-      <h3>VISUAL DESIGNER — OUTBOUNDENGINE</h3>
-      <p>Sept. 2017 - Mar. 2020</p>
-      <p>
-        Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se
-        ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque
-        insitam in ea quid
-        est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.
-      </p>
-    </div>
-    <div>
-      <h3>LEAD DESIGNER — SCRYPT, INC.</h3>
-      <p>Jun. 2014 - Sept. 2017</p>
-      <p>
-        Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se
-        ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque
-        insitam in ea quid
-        est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.
-      </p>
-    </div>
-    <div>
-      <h3>UI DESIGNER — PINGER INC.</h3>
-      <p>Jun. 2014 - Sept. 2017</p>
-      <p>
-        Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se
-        ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque
-        insitam in ea quid
-        est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.
-      </p>
-      <div>
-        <img src="images/Rectangle Copy.png" alt="Recangulo verde separador de secciones">
-      </div>
-    </div>
-    <div>
+      
+      <article class="job">
+        <h3>FRONT-END DEVELOPER — DROPBOX</h3>
+        <p class="date">Mar. 2020 - Present</p>
+        <p>Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.</p>
+      </article>
+
+      <article class="job">
+        <h3>VISUAL DESIGNER — OUTBOUNDENGINE</h3>
+        <p class="date">Sept. 2017 - Mar. 2020</p>
+        <p>Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.</p>
+      </article>
+
+      <article class="job">
+        <h3>LEAD DESIGNER — SCRYPT, INC.</h3>
+        <p class="date">Jun. 2014 - Sept. 2017</p>
+        <p>Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.</p>
+      </article>
+
+      <article class="job">
+        <h3>UI DESIGNER — PINGER INC.</h3>
+        <p class="date">Jun. 2014 - Sept. 2017</p>
+        <p>Describe your responsibilities. Tum dicere exorsus est cur verear, ne ad id omnia referri oporteat, ipsum per se ipsam voluptatem, quia consequuntur magni dolores eos, qui blanditiis praesentium voluptatum deleniti atque insitam in ea quid est eligendi optio, cumque nihil ut ipsi auctori huius disciplinae placet: constituam, quid.</p>
+      </article>
+    </section>
+
+    <section id="education">
       <h2>Education</h2>
-      <h3>BFA IN GRAPHIC DESIGN — JAMES MADISON UNIVERSITY</h3>
-      <p>Graduated 2014</p>
-      <div>
-        <img src="images/Rectangle Copy.png" alt="Recangulo verde separador de secciones">
-      </div>
-    </div>
-    <div>
-      <h3>SKILLSET</h3>
-      <ul>
-        <li>Visual Design</li>
-        <li>Ilustration</li>
-        <li>UX / Prototyping</li>
-        <li>Video / Motion Graphics</li>
-        <li>Marketing</li>
-        <li>Front-End Development</li>
-      </ul>
-    </div>
-    <div>
-      <h3>AWARDS</h3>
-      <ul>
-        <li>Award 1 — Mar. 2019</li>
-        <li>Award 2 — Sept. 2015</li>
-        <li>Award 3 — Feb. 2013</li>
-        <li>Award 4 — Dec. 2011</li>
-        <li>Award 5 — Jan. 2005</li>
-      </ul>
-    </div>
-    <div>
-      <h3>CAREER TRAITS</h3>
-      <p>Holistic Designer - Design should be treated as a living organism, guided by the environment it lives in as a
-        whole.</p>
-      <p>User-Focused - I pay close attention to the user’s needs and pain points. I design with empathy. Launch, learn
-        & iterate.</p>
-      <p>Proactive Evolution - Curiosity and a desire to learn constantly broadens my skill set, enabling me to wear
-        many hats at once.</p>
-      <p>Bold, yet practical - I know when to push the boundaries vs. when to embrace simplicity to meet multiple
-        deadlines.</p>
-    </div>
-    <div>
-      <h3>RECENT WORKS</h3>
-      <ul>
-        <li><a href="#">thedonut.co →</a></li>
-        <li><a href="#">outboundengine.com →</a></li>
-        <li><a href="#">rswalsh.com →</a></li>
-        <li><a href="#">frondaustin.com →</a></li>
-        <li><a href="#">tipyo.net →</a></li>
-        <li><a href="#">codefresh.io → </a></li>
-        <li><a href="#">carsoncreekranch.com →</a></li>
-      </ul>
-    </div>
-    <div>
-      <p>Get in touch!</p>
+      <article class="education-item">
+        <h3>BFA IN GRAPHIC DESIGN — JAMES MADISON UNIVERSITY</h3>
+        <p class="date">Graduated 2014</p>
+      </article>
+    </section>
 
-      <div>
-        <a href="mailto:youremail@email.com">youremail@email.com</a>
-        <a href="tel:512.273.1838">512.273.1838</a>
-      </div>
+    <aside class="sidebar">
+      <section id="skillset">
+        <h3>SKILLSET</h3>
+        <ul>
+          <li>Visual Design</li>
+          <li>Ilustration</li>
+          <li>UX / Prototyping</li>
+          <li>Video / Motion Graphics</li>
+          <li>Marketing</li>
+          <li>Front-End Development</li>
+        </ul>
+      </section>
 
-      <div>
-        <img src="images/facebook.png" alt="logotipo de facebook">
-        <img src="images/instagram.png" alt="logotipo de instagram">
-        <img src="images/linkedin.png" alt="logotipo de linkedin">
-        <img src="images/twitter.png" alt="logotipo de twitter">
-      </div>
-    </div>
+      <section id="awards">
+        <h3>AWARDS</h3>
+        <ul>
+          <li>Award 1 — Mar. 2019</li>
+          <li>Award 2 — Sept. 2015</li>
+          <li>Award 3 — Feb. 2013</li>
+          <li>Award 4 — Dec. 2011</li>
+          <li>Award 5 — Jan. 2005</li>
+        </ul>
+      </section>
+
+      <section id="traits">
+        <h3>CAREER TRAITS</h3>
+        <p><strong>Holistic Designer</strong> - Design should be treated as a living organism, guided by the environment it lives in as a whole.</p>
+        <p><strong>User-Focused</strong> - I pay close attention to the user’s needs and pain points. I design with empathy. Launch, learn & iterate.</p>
+        <p><strong>Proactive Evolution</strong> - Curiosity and a desire to learn constantly broadens my skill set, enabling me to wear many hats at once.</p>
+        <p><strong>Bold, yet practical</strong> - I know when to push the boundaries vs. when to embrace simplicity to meet multiple deadlines.</p>
+      </section>
+
+      <section id="works">
+        <h3>RECENT WORKS</h3>
+        <ul>
+          <li><a href="#" target="_blank">thedonut.co &rarr;</a></li>
+          <li><a href="#" target="_blank">outboundengine.com &rarr;</a></li>
+          <li><a href="#" target="_blank">rswalsh.com &rarr;</a></li>
+          <li><a href="#" target="_blank">frondaustin.com &rarr;</a></li>
+          <li><a href="#" target="_blank">tipyo.net &rarr;</a></li>
+          <li><a href="#" target="_blank">codefresh.io &rarr;</a></li>
+          <li><a href="#" target="_blank">carsoncreekranch.com &rarr;</a></li>
+        </ul>
+      </section>
+    </aside>
   </main>
 
-  <footer></footer>
+  <footer id="contact">
+    <h2>Get in touch!</h2>
+    <div class="contact-info">
+      <a href="mailto:youremail@email.com">youremail@email.com</a>
+      <a href="tel:5122731838">512.273.1838</a>
+    </div>
+    <div class="social-links">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+    </div>
+  </footer>
 </body>
 
 </html>

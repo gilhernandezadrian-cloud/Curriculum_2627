@@ -1,15 +1,30 @@
 @charset "UTF-8";
 
 /* Reseteo global de márgenes y cálculo de tamaños */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  /* Tipografías oficiales */
+  --font-titles: 'Playfair Display', serif;
+  --font-body: 'PT Sans Narrow', sans-serif;
+
+  /* Colores oficiales de la paleta Figma */
+  --color-primary: #0699A6;   /* Turquesa */
+  --color-secondary: #9E8C6C; /* Dorado / Marrón */
+  --color-text: #000000;      /* Negro */
+  --color-bg-card: #FFFFFF;   /* Blanco */
+  --color-bg-main: #F2F2F2;   /* Gris claro de fondo */
+}
+
 /* Configuración base para el cuerpo */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font);
   line-height: 1.5;
 }
 
