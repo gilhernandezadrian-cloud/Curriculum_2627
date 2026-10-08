@@ -14,7 +14,7 @@
 }
 
 /* ==========================================================================
-   2. RESET GENERAL
+   2. RESET GENERAL Y ENVOLTORIO
    ========================================================================== */
 * {
   margin: 0;
@@ -52,7 +52,6 @@ p {
   margin-bottom: 12px;
 }
 
-/* Envoltorio principal */
 .page-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -137,14 +136,15 @@ h1 {
 }
 
 /* ==========================================================================
-   4. CONTENIDO PRINCIPAL Y BARRITAS (BASE / MÒBIL 375px - 414px)
+   4. CONTENIDO PRINCIPAL Y BARRITAS (MOBILE-FIRST BASE 375px - FIGMA)
    ========================================================================== */
 .main-container {
   width: 100%;
-  padding: 30px 20px;
+  max-width: 375px;
+  padding: 30px 35px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  /* 1 columna en mòbil */
   gap: 30px;
 }
 
@@ -157,7 +157,7 @@ main h2 {
   margin-bottom: 10px;
 }
 
-/* Barrita decorativa garantizada */
+/* Barrita decorativa con R mayúscula */
 .divider {
   width: 54px;
   height: 10px;
@@ -205,7 +205,7 @@ h3,
 }
 
 /* ==========================================================================
-   5. FOOTER I XARXES SOCIALS
+   5. FOOTER Y REDES SOCIALES
    ========================================================================== */
 footer#contact {
   background-color: var(--color-bg-light);
@@ -233,72 +233,4 @@ footer#contact h2 {
   font-family: var(--font-title);
   font-size: 20px;
   font-weight: 700;
-  color: var(--color-primary);
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* Redes Sociales centradas en horizontal */
-.social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-}
-
-.social-links a {
-  display: inline-block;
-}
-
-.social-links img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-/* ==========================================================================
-   6. RESPONSIVE (MOBILE-FIRST MEDIA QUERIES)
-   ========================================================================== */
-
-/* TAULETA (aprox. 768px - 1024px) */
-@media (min-width: 768px) {
-  .main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Organizació en 2 columnes */
-    gap: 40px;
-    padding: 40px 32px;
-  }
-
-  .main-content {
-    grid-column: 1 / 2;
-  }
-
-  .sidebar {
-    grid-column: 2 / 3;
-    /* Recol·locació de la columna lateral */
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-}
-
-/* ESCRIPTORI (≥ 1280px - Mockup Figma) */
-@media (min-width: 1280px) {
-  .page-wrapper {
-    max-width: 1280px;
-    /* Amplada màxima centrada */
-    margin: 0 auto;
-    /* Marges laterals automàtics */
-  }
-
-  .main-container {
-    grid-template-columns: 2fr 1fr;
-    /* Proporció exacta de Figma */
-    gap: 60px;
-    padding: 60px 40px;
-  }
-}
+  color: var(--color-
