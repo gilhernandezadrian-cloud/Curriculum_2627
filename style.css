@@ -1,35 +1,212 @@
-@charset "UTF-8";
+/* ==========================================================================
+   1. VARIABLES GLOBALES
+   ========================================================================== */
+:root {
+  --color-primary: #0699a6;
+  --color-secondary: #9eb06c;
+  --color-text: #000000;
+  --color-muted: #666666;
+  --color-bg-light: #f4f6f7;
+  --color-white: #ffffff;
 
-/* Reseteo global de márgenes y cálculo de tamaños */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+  --font-title: "Playfair Display", serif;
+  --font-body: "PT Sans Narrow", sans-serif;
+}
+
+/* ==========================================================================
+   2. RESET GENERAL
+   ========================================================================== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-:root {
-  /* Tipografías oficiales */
-  --font-titles: 'Playfair Display', serif;
-  --font-body: 'PT Sans Narrow', sans-serif;
-
-  /* Colores oficiales de la paleta Figma */
-  --color-primary: #0699A6;   /* Turquesa */
-  --color-secondary: #9E8C6C; /* Dorado / Marrón */
-  --color-text: #000000;      /* Negro */
-  --color-bg-card: #FFFFFF;   /* Blanco */
-  --color-bg-main: #F2F2F2;   /* Gris claro de fondo */
-}
-
-/* Configuración base para el cuerpo */
 body {
-  font-family: var(--font);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-white);
   line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+/* Envoltorio principal centrado */
+.page-wrapper {
+  width: 100%;
+  max-width: 700px; /* Tamaño máximo controlado para que no se desperdigue */
+  margin: 0 auto;
+  background-color: var(--color-white);
+}
+
+/* ==========================================================================
+   3. HEADER
+   ========================================================================== */
+.hero-header {
+  background-color: var(--color-bg-light);
+  padding: 50px 20px 60px;
+  text-align: center;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 190px;
+  height: 170px;
+  margin: 0 auto 20px auto;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.greeting-shape {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.role {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   4. CONTENIDO PRINCIPAL Y BARRITAS
+   ========================================================================== */
+main {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main h2 {
+  font-family: var(--font-title);
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Barrita decorativa garantizada */
+.divider {
+  width: 54px;
+  height: 10px;
+  background-color: var(--color-primary);
+  background-image: url("images/Rectangle%20Copy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 12px 0 20px 0;
+  display: block;
+}
+
+h3,
+.role-title {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+footer#contact {
+  background-color: var(--color-bg-light);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer#contact h2 {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
 }
