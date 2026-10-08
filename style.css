@@ -27,7 +27,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-white);
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -46,7 +46,7 @@ img {
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--color-text);
   margin-bottom: 12px;
@@ -63,7 +63,7 @@ p {
    ========================================================================== */
 .hero-header {
   background-color: var(--color-bg-light);
-  padding: 50px 20px 60px;
+  padding: 40px 20px 50px;
   text-align: center;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
@@ -74,6 +74,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .profile-wrapper {
@@ -106,7 +108,7 @@ p {
 
 .role {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--color-secondary);
@@ -116,7 +118,7 @@ p {
 
 h1 {
   font-family: var(--font-title);
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.1;
   color: var(--color-text);
@@ -129,35 +131,36 @@ h1 {
   color: var(--color-white);
   padding: 10px 24px;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 /* ==========================================================================
-   4. CONTENIDO PRINCIPAL Y BARRITAS (MOBILE-FIRST BASE 375px - FIGMA)
+   4. CONTENIDO PRINCIPAL (BASE MÓVIL FLEXBOX)
    ========================================================================== */
 .main-container {
   width: 100%;
   max-width: 375px;
-  padding: 30px 35px;
+  padding: 30px 25px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  /* 1 columna vertical en móvil */
   gap: 30px;
 }
 
 main h2 {
   font-family: var(--font-title);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 900;
   color: var(--color-text);
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
-/* Barrita decorativa con R mayúscula */
+/* Barrita decorativa */
 .divider {
   width: 54px;
   height: 10px;
@@ -172,7 +175,7 @@ main h2 {
 h3,
 .role-title {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--color-text);
   text-transform: uppercase;
@@ -180,23 +183,23 @@ h3,
 }
 
 .date {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--color-muted);
   margin-bottom: 8px;
 }
 
 .sidebar h3 {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-muted);
   letter-spacing: 1.5px;
   margin-top: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .works-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .works-list a {
@@ -205,11 +208,11 @@ h3,
 }
 
 /* ==========================================================================
-   5. FOOTER Y REDES SOCIALES
+   5. FOOTER Y REDES SOCIALES (FLEXBOX)
    ========================================================================== */
 footer#contact {
   background-color: var(--color-bg-light);
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -222,7 +225,7 @@ footer#contact h2 {
   font-family: var(--font-title);
   font-size: 32px;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .contact-info {
@@ -231,6 +234,93 @@ footer#contact h2 {
 
 .contact-info a {
   font-family: var(--font-title);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--color-
+  color: var(--color-primary);
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px;
+  width: 100%;
+}
+
+.social-links a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links img {
+  display: inline-block !important;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE CON FLEXBOX (TABLET Y DESKTOP)
+   ========================================================================== */
+
+/* TABLET / DESKTOP (≥ 768px) */
+@media (min-width: 768px) {
+  .hero-header {
+    padding: 60px 40px 80px;
+    text-align: left;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .profile-wrapper {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+  }
+
+  /* Disposición de 2 columnas con Flexbox */
+  .main-container {
+    max-width: 1080px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* Pone la Sidebar a la IZQUIERDA y el Main Content a la DERECHA */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  /* Ancho de la columna principal (DERECHA) */
+  .main-content {
+    flex: 1;
+    /* Ocupa todo el espacio sobrante */
+  }
+
+  /* Ancho de la columna lateral / sidebar (IZQUIERDA) */
+  .sidebar {
+    width: 280px;
+    /* Ancho fijo como en el diseño de Figma */
+    flex-shrink: 0;
+    /* Evita que se encoja */
+  }
+}
+
+/* ESCRIPTORI GRANDES (≥ 1280px) */
+@media (min-width: 1280px) {
+  .main-container {
+    gap: 80px;
+    padding: 80px 20px;
+  }
+}
