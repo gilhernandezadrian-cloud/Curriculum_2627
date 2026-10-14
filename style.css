@@ -3,7 +3,7 @@
    ========================================================================== */
 :root {
   --color-primary: #0699a6;
-  --color-secondary: #9eb06c;
+  --color-secondary: #9e8c6c; /* Color exacto Secondary de Figma (#9E8C6C) */
   --color-text: #000000;
   --color-muted: #666666;
   --color-bg-light: #f4f6f7;
@@ -26,7 +26,7 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-white);
-  line-height: 1.5;
+  line-height: 1.4;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
@@ -47,9 +47,9 @@ img {
 
 p {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--color-text);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .page-wrapper {
@@ -59,7 +59,7 @@ p {
 }
 
 /* ==========================================================================
-   3. HEADER
+   3. HEADER (BASE MÓVIL)
    ========================================================================== */
 .hero-header {
   background-color: var(--color-bg-light);
@@ -76,13 +76,15 @@ p {
   justify-content: center;
   max-width: 1080px;
   margin: 0 auto;
+  gap: 20px;
 }
 
 .profile-wrapper {
   position: relative;
-  width: 190px;
+  width: 170px;
   height: 170px;
-  margin: 0 auto 20px auto;
+  flex-shrink: 0;
+  margin: 0 auto;
 }
 
 .profile-img {
@@ -106,12 +108,18 @@ p {
   object-fit: contain;
 }
 
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .role {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--color-secondary);
+  color: var(--color-secondary); /* Usa #9e8c6c */
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -120,7 +128,7 @@ h1 {
   font-family: var(--font-title);
   font-size: 36px;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.05;
   color: var(--color-text);
   margin-bottom: 20px;
 }
@@ -129,16 +137,18 @@ h1 {
   display: inline-block;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 10px 24px;
+  padding: 12px 24px;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 /* ==========================================================================
-   4. CONTENIDO PRINCIPAL (BASE MÓVIL FLEXBOX)
+   4. CONTENIDO PRINCIPAL (BASE MÓVIL)
    ========================================================================== */
 .main-container {
   width: 100%;
@@ -147,7 +157,6 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  /* 1 columna vertical en móvil */
   gap: 30px;
 }
 
@@ -160,7 +169,7 @@ main h2 {
   margin-bottom: 8px;
 }
 
-/* Barrita decorativa */
+/* Barrita decorativa verde */
 .divider {
   width: 54px;
   height: 10px;
@@ -172,43 +181,67 @@ main h2 {
   display: block;
 }
 
-h3,
+/* Títulos de profesiones de la columna derecha */
 .role-title {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-secondary); /* Color #9e8c6c */
   text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.job-item {
+  margin-bottom: 18px;
+}
+
+.job-header {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4px;
 }
 
 .date {
   font-size: 12px;
   color: var(--color-muted);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
+.sidebar-block {
+  margin-bottom: 20px;
+}
+
+/* Títulos de las secciones de la columna izquierda (SKILLSET, AWARDS, etc.) */
 .sidebar h3 {
+  font-family: var(--font-body);
   font-size: 13px;
-  color: var(--color-muted);
+  font-weight: 700;
+  color: var(--color-secondary); /* Color #9e8c6c de Figma */
   letter-spacing: 1.5px;
-  margin-top: 20px;
+  text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 6px;
 }
 
 .works-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .works-list a {
+  font-size: 13px;
   font-weight: 700;
   color: var(--color-primary);
 }
 
 /* ==========================================================================
-   5. FOOTER Y REDES SOCIALES (FLEXBOX)
+   5. FOOTER
    ========================================================================== */
 footer#contact {
   background-color: var(--color-bg-light);
@@ -264,11 +297,10 @@ footer#contact h2 {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE CON FLEXBOX (TABLET Y DESKTOP)
+   6. RESPONSIVE CON FLEXBOX (TABLET Y DESKTOP ≥ 768px)
    ========================================================================== */
-
-/* TABLET / DESKTOP (≥ 768px) */
 @media (min-width: 768px) {
+  /* --- HEADER RESPONSIVE --- */
   .hero-header {
     padding: 60px 40px 80px;
     text-align: left;
@@ -278,46 +310,128 @@ footer#contact h2 {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 50px;
+    gap: 60px;
   }
 
   .profile-wrapper {
     margin: 0;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .greeting-shape {
+    top: auto;
+    bottom: -10px;
+    right: 35px;
+  }
+
+  .header-text {
+    align-items: flex-start;
+    flex: 1;
   }
 
   h1 {
     font-size: 52px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
-  /* Disposición de 2 columnas con Flexbox */
+  /* --- ACTIVACIÓN MODO 2 COLUMNAS --- */
   .main-container {
     max-width: 1080px;
     padding: 60px 40px;
     display: flex;
     flex-direction: row-reverse;
-    /* Pone la Sidebar a la IZQUIERDA y el Main Content a la DERECHA */
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 60px;
   }
 
-  /* Ancho de la columna principal (DERECHA) */
   .main-content {
     flex: 1;
-    /* Ocupa todo el espacio sobrante */
   }
 
-  /* Ancho de la columna lateral / sidebar (IZQUIERDA) */
   .sidebar {
     width: 280px;
-    /* Ancho fijo como en el diseño de Figma */
     flex-shrink: 0;
-    /* Evita que se encoja */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sidebar-block {
+    margin-bottom: 0 !important;
+  }
+
+  .sidebar-block h3 {
+    margin-bottom: 4px;
+  }
+
+  .sidebar-block p {
+    font-size: 12.5px;
+    line-height: 1.2;
+    margin-bottom: 3px !important;
+  }
+
+  .works-list {
+    gap: 2px;
+  }
+
+  .works-list a {
+    font-size: 12.5px;
+    line-height: 1.1;
+  }
+
+  .about-section {
+    margin-bottom: 28px;
+  }
+
+  .experience-section {
+    margin-bottom: 28px;
+  }
+
+  .job-item {
+    margin-bottom: 14px;
+  }
+
+  /* --- ALINEACIÓN HORIZONTAL DE FECHAS Y GRADUATED 2014 --- */
+  .job-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    width: 100%;
+  }
+
+  .job-header .role-title,
+  .job-header .date {
+    margin-bottom: 0 !important;
   }
 }
 
-/* ESCRIPTORI GRANDES (≥ 1280px) */
+/* ==========================================================================
+   7. ESCRITORIO ANCHO (≥ 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .sidebar-block p,
+  .works-list a {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .job-item {
+    margin-bottom: 18px;
+  }
+
+  .about-section,
+  .experience-section {
+    margin-bottom: 32px;
+  }
+}
+
+/* ==========================================================================
+   8. ESCRITORIO EXTRA GRANDE (≥ 1280px)
+   ========================================================================== */
 @media (min-width: 1280px) {
   .main-container {
     gap: 80px;
