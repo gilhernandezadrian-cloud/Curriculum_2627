@@ -156,7 +156,7 @@ h1 {
    ========================================================================== */
 .main-container {
   width: 100%;
-  max-width: 375px;
+  /* max-width: 375px; */
   padding: 30px 25px;
   margin: 0 auto;
   display: flex;
@@ -303,18 +303,36 @@ footer#contact h2 {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE CON FLEXBOX (TABLET Y DESKTOP ≥ 768px)
+   6. TABLET (768px a 1023px: 1 COLUMNA CON MÁS MARGEN Y PADDING)
    ========================================================================== */
 @media (min-width: 768px) {
+  .main-container {
+    width: 100%;
+    max-width: 720px;
+    /* Limita el ancho de lectura y crea márgenes laterales amplios */
+    padding: 50px 48px;
+    gap: 40px;
+  }
 
-  /* --- HEADER RESPONSIVE --- */
+  /* Mantiene la alineación horizontal de puesto y fecha */
+  .job-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
 
-
+  .job-header .role-title,
+  .job-header .date {
+    margin-bottom: 0;
+  }
 }
 
 /* --- ACTIVACIÓN MODO 2 COLUMNAS --- */
 
 @media (min-width: 1024px) {
+  /* --- HEADER EN FILA --- */
   .hero-header {
     padding: 60px 40px 80px;
     text-align: left;
@@ -349,7 +367,7 @@ footer#contact h2 {
     font-size: 52px;
     margin-bottom: 20px;
   }
-
+/* --- ACTIVACIÓN MODO 2 COLUMNAS --- */
   .main-container {
     max-width: 1080px;
     padding: 60px 40px;
