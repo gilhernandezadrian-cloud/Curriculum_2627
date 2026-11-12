@@ -3,10 +3,13 @@
    ========================================================================== */
 :root {
   --color-primary: #0699a6;
-  --color-secondary: #9e8c6c; /* Color exacto Secondary de Figma (#9E8C6C) */
+  /*turquesa*/
+  --color-secondary: #9e8c6c;
+  /* dorado/ocre */
   --color-text: #000000;
   --color-muted: #666666;
   --color-bg-light: #f4f6f7;
+  /*gris claro del fondo*/
   --color-white: #ffffff;
 
   --font-title: "Playfair Display", serif;
@@ -119,7 +122,8 @@ p {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--color-secondary); /* Usa #9e8c6c */
+  color: var(--color-secondary);
+  /* Usa #9e8c6c */
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -186,7 +190,8 @@ main h2 {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-secondary); /* Color #9e8c6c */
+  color: var(--color-secondary);
+  /* Color #9e8c6c */
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -216,7 +221,8 @@ main h2 {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-secondary); /* Color #9e8c6c de Figma */
+  color: var(--color-secondary);
+  /* Color #9e8c6c de Figma */
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -300,7 +306,15 @@ footer#contact h2 {
    6. RESPONSIVE CON FLEXBOX (TABLET Y DESKTOP ≥ 768px)
    ========================================================================== */
 @media (min-width: 768px) {
+
   /* --- HEADER RESPONSIVE --- */
+
+
+}
+
+/* --- ACTIVACIÓN MODO 2 COLUMNAS --- */
+
+@media (min-width: 1024px) {
   .hero-header {
     padding: 60px 40px 80px;
     text-align: left;
@@ -336,7 +350,6 @@ footer#contact h2 {
     margin-bottom: 20px;
   }
 
-  /* --- ACTIVACIÓN MODO 2 COLUMNAS --- */
   .main-container {
     max-width: 1080px;
     padding: 60px 40px;
@@ -413,6 +426,7 @@ footer#contact h2 {
    7. ESCRITORIO ANCHO (≥ 1024px)
    ========================================================================== */
 @media (min-width: 1024px) {
+
   .sidebar-block p,
   .works-list a {
     font-size: 13px;
